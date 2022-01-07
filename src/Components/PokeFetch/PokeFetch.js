@@ -25,6 +25,7 @@ class PokeFetch extends Component {
           pokeInfo: res,
           pokeSprite: res.sprites.front_default,
           pokeName: res.species.name,
+          seconds: 10,
         })
       })
       .catch((err) => console.log(err))
@@ -58,7 +59,7 @@ class PokeFetch extends Component {
       <div className={'wrapper'}>
         <button className={'start'} onClick={() => (this.fetchPokemon(), this.timer())}>Start!</button>
         <h1 className={'timer'} > Time Remaining: {seconds}</h1>
-        <h3>{seconds === 0 ? 
+        <h4>{seconds === 0 ? 
         <div className={'pokeWrap'}>
           <img className={'pokeImg'} src={this.state.pokeSprite} />
           <h1 className={'pokeName'}>{this.state.pokeName}</h1>
@@ -68,7 +69,7 @@ class PokeFetch extends Component {
           <img className={'pokeImgDark'} src={this.state.pokeSprite} />
         </div>
       }
-      </h3> 
+      </h4> 
       </div>
     )
   }
