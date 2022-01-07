@@ -28,6 +28,11 @@
   margin-left: 18vw;
 }
 
+.pokeImgDark {
+  width: 500px;
+  filter: brightness(0%)
+}
+
 .pokeImg {
   width: 500px;
 }
